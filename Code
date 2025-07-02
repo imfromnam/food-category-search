@@ -1,0 +1,22 @@
+#step 1
+drinks = ["milk","tea", "coffee "]
+meal = ["pizza ","burgers","hotdog"]
+extras =["ketchup","Mayo","sauce"]
+
+#step 2
+food = [drinks,meal, extras]
+#step 3
+ask = input ("enter a food item to search for? ")
+# Step 4
+found = False 
+for category in food:
+    for item in category:
+        if ask == item.strip().lower():
+            print("Item found") 
+            found = True 
+            break 
+    if found:
+        break 
+
+if not found:
+    print("Item not found")
